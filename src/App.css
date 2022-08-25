@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+body{
+    text-emphasis: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Styling the container containing all the forms*/
+.container-middle{
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-container, .btn-final-page{
+    max-width: 55%;
+    margin:auto
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*Styling the Image before Header*/
+.header{
+    margin: 10px;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header img {
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header h2 {
+    display: inline-block;
+}
+
+.message{
+    text-align: center;
+}
+
+.container-middle button{
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    background-color: #692fef;
+}
+
+/*Styling for card input in Form Page #3*/
+
+.card-input-element {
+    display: none;
+}
+
+.card-input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 1px #eae9ea;
+}
+
+.card-input:hover {
+    cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+     box-shadow: 0 0 1px 1px #692fef;
+ }
+
+.panel p{
+    margin-top: 8px;
 }
