@@ -2,7 +2,7 @@ import React from "react";
 
 function SecondForm(){
     return (
-    <div class="container-middle">
+    <div>
         <div class="message">
             <h2>Let's set up a home for all your work</h2>
             <p class="text-muted">You can always create another workspace later.</p>
@@ -21,7 +21,6 @@ function SecondForm(){
                 <input type="text" class="form-control" id="basic-url" placeholder="Example"/>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Create Workspace</button>
       </form>
     </div>    
     );

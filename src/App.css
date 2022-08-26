@@ -3,13 +3,7 @@ body{
 }
 
 /*Styling the container containing all the forms*/
-.container-middle{
-    margin-left: auto;
-    margin-right: auto;
-    width:80%;
-}
-
-.form-container, .btn-final-page{
+.form-container{
     max-width: 55%;
     margin:auto
 }
@@ -21,9 +15,9 @@ body{
 }
 
 .header img {
-    margin-bottom: 15px;
-    width: 40px;
     height: 40px;
+    margin-bottom: 15px;
+    width: 40px;    
 }
 
 .header h2 {
@@ -31,14 +25,20 @@ body{
 }
 
 .message{
+    margin-top: 20px;
     text-align: center;
 }
 
-.container-middle button{
-    margin-top: 15px;
-    display: block;
-    width: 100%;
+.body-content button{
     background-color: #692fef;
+    border-radius: 5px;
+    border: none;
+    color: rgb(232, 222, 249);
+    display: block;
+    margin: 15px auto;
+    outline: none;
+    padding:6px;
+    width: 55%;  
 }
 
 /*Styling for card input in Form Page #3*/
@@ -48,20 +48,21 @@ body{
 }
 
 .card-input {
-    margin: 10px;
-    padding: 10px;
     border-radius: 3px;
     box-shadow: 0 0 1px 1px #eae9ea;
-}
-
-.card-input:hover {
-    cursor: pointer;
+    margin: 10px;
+    padding: 10px; 
 }
 
 .card-input-element:checked + .card-input {
-     box-shadow: 0 0 1px 1px #692fef;
+    box-shadow: 0 0 1px 1px #692fef;
  }
 
 .panel p{
     margin-top: 8px;
+}
+
+.body-content{
+    margin: auto;
+    max-width: 60%;
 }

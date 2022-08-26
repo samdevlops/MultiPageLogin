@@ -1,31 +1,68 @@
-import React, { useState } from 'react';
-
-import Stepper from '@mui/material/Stepper';
+import * as React from 'react';
 import logo from '../images/icon.png';
 
-//Importing components
-import FirstForm from './forms/FirstForm';
-import SecondForm from './forms/SecondForm';
-import ThirdForm from './forms/ThirdForm';
-import FinalForm from './forms/FinalForm';
+import { purple } from '@mui/material/colors';
+import Stepper from '@mui/material/Stepper';
+import Step from '@mui/material/Step';
+import StepLabel from '@mui/material/StepLabel';
 
-function Main() {
+import FirstForm from "./forms/FirstForm";
+import SecondForm from "./forms/SecondForm";
+import ThirdForm from "./forms/ThirdForm";
+import FinalForm from "./forms/FinalForm";
 
-  const [count, setCount] = useState(0);
+//to define the number
+const steps = ['', '', ''];
+
+export default function Main() {
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const renderLogic =(activeStep)=>{
+    switch(activeStep){
+      case 1:
+        return <FirstForm />
+        break;
+      case 2:
+        return <SecondForm />
+        break;
+      case 3: return <ThirdForm />
+        break;
+      default: 
+        return <FinalForm />            
+    }
+  }
 
   return (
     <React.Fragment>
-      <div class="container-middle">
           <div class="header">
               <img src={logo} alt="logo" />
               <h2>Eden</h2>
           </div>
-          <Stepper activeStep={count} alternativeLabel></Stepper>
-
-
-      </div>
+          <div class="body-content">
+              <Stepper activeStep={activeStep}>
+                {steps.map((label) => {
+                  return (
+                    <Step key={label}>
+                      <StepLabel></StepLabel>
+                    </Step>
+                  );
+                })}
+              </Stepper>
+          </div>
+          <div class="body-content">
+            {renderLogic(activeStep+1)}
+          </div>
+          <div class="body-content">
+          <button 
+              onClick={handleNext}
+              type="submit">
+              {activeStep === steps.length ? 'Launch Eden' : 'Create Workspace'}
+            </button>
+          </div>
     </React.Fragment>
   );
 }
-
-export default Main;

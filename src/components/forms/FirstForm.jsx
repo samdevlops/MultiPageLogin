@@ -3,7 +3,7 @@ import React from "react";
 function FirstForm(){
    
     return (
-    <div class="container-middle">
+    <div>
         <div class="message">
             <h2>Welcome! First things first...</h2>
             <p>You can always change them later.</p>
@@ -17,7 +17,6 @@ function FirstForm(){
           <label for="displayname" class="form-label">Display Name</label>
           <input type="text" class="form-control" id="displayname" placeholder="Steve"/>
         </div>
-        <button type="submit" class="btn btn-primary">Create Workspace</button>
       </form>
     </div>    
     );

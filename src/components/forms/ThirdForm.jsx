@@ -2,7 +2,7 @@ import React from "react";
 
 function ThirdForm(){
     return (
-    <div class="container-middle">
+    <div>
         <div class="message">
             <h2>How are you planning to use Eden?</h2>
             <p class="text-muted">We'll streamline your setup accordingly.</p>
@@ -32,7 +32,6 @@ function ThirdForm(){
                 </label>    
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Create Workspace</button>
       </form>
     </div>    
     );
