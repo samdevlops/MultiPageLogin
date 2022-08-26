@@ -4,7 +4,7 @@ body{
 
 /*Styling the container containing all the forms*/
 .form-container{
-    max-width: 55%;
+    max-width: 60%;
     margin:auto
 }
 
@@ -21,12 +21,17 @@ body{
 }
 
 .header h2 {
+    margin: 10px;
     display: inline-block;
 }
 
 .message{
     margin-top: 20px;
     text-align: center;
+}
+
+.stepper-box{
+    width:35%;
 }
 
 .body-content button{
@@ -38,7 +43,7 @@ body{
     margin: 15px auto;
     outline: none;
     padding:6px;
-    width: 55%;  
+    width: 60%;  
 }
 
 /*Styling for card input in Form Page #3*/

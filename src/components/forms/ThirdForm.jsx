@@ -1,4 +1,6 @@
 import React from "react";
+import PersonIcon from '@mui/icons-material/Person';
+import PeopleIcon from '@mui/icons-material/People';
 
 function ThirdForm(){
     return (
@@ -13,6 +15,7 @@ function ThirdForm(){
                 <label>
                     <input type="radio" name="using_for" class="card-input-element" />
                     <div class="panel card-input">
+                        <PersonIcon sx={{ color: '#692fef', margin:'15px 0px'}}/>
                         <h5 class="card-title">For myself</h5>
                         <p class="card-text">
                             Write better. Think more clearly. Stay organized.
@@ -24,6 +27,7 @@ function ThirdForm(){
                 <label>
                     <input type="radio" name="using_for" class="card-input-element" />
                     <div class="panel card-input">
+                        <PeopleIcon sx={{ color: '#692fef', margin:'15px 0px' }}/>
                         <h5 class="card-title">With my team</h5>
                         <p class="card-text">
                             Wikis, docs, tasks, & projects, all in one place.

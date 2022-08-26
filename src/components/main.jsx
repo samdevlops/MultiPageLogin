@@ -1,7 +1,6 @@
 import * as React from 'react';
 import logo from '../images/icon.png';
 
-import { purple } from '@mui/material/colors';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
 import StepLabel from '@mui/material/StepLabel';
@@ -12,7 +11,7 @@ import ThirdForm from "./forms/ThirdForm";
 import FinalForm from "./forms/FinalForm";
 
 //to define the number
-const steps = ['', '', ''];
+const steps = ['', '', '', ''];
 
 export default function Main() {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -42,12 +41,12 @@ export default function Main() {
               <img src={logo} alt="logo" />
               <h2>Eden</h2>
           </div>
-          <div class="body-content">
-              <Stepper activeStep={activeStep}>
+          <div class="body-content stepper-box">
+              <Stepper activeStep={activeStep} sx={{ color: 'red'}}>
                 {steps.map((label) => {
                   return (
-                    <Step key={label}>
-                      <StepLabel></StepLabel>
+                    <Step key={label} >
+                      <StepLabel />
                     </Step>
                   );
                 })}
@@ -60,7 +59,7 @@ export default function Main() {
           <button 
               onClick={handleNext}
               type="submit">
-              {activeStep === steps.length ? 'Launch Eden' : 'Create Workspace'}
+              {activeStep === steps.length - 1 ? 'Launch Eden' : 'Create Workspace'}
             </button>
           </div>
     </React.Fragment>
